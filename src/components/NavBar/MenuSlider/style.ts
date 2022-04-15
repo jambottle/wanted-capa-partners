@@ -32,14 +32,16 @@ const MenuLogo = styled.img`
   height: 12px;
 `;
 
-const Divider = styled.div`
+const Divider = styled.hr`
   position: absolute;
   top: 44px;
   left: 0;
 
   width: 280px;
   height: 1px;
-  background-color: #e5e5e5;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
 `;
 
 const MenuList = styled.ul`
