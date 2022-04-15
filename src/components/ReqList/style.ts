@@ -29,4 +29,24 @@ const Container = styled.section`
   }
 `;
 
-export { Container };
+const NoResult = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100px;
+  margin-top: 32px;
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+
+  span {
+    color: #939fa5;
+    font-family: 'Noto Sans KR Regular';
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
+export { Container, NoResult };

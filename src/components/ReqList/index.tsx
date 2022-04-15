@@ -4,7 +4,7 @@ import ReqItem from 'components/ReqList/ReqItem';
 import * as S from './style';
 
 function ReqList() {
-  const [itemList, setItemList] = useState<ItemType[]>([
+  const [filteredItems, setFilteredItems] = useState<ItemType[]>([
     {
       id: 1,
       title: '자동차 시제품 제작',
@@ -74,11 +74,19 @@ function ReqList() {
   ]);
 
   return (
-    <S.Container>
-      {itemList.map(item => (
-        <ReqItem key={item.id} item={item} />
-      ))}
-    </S.Container>
+    <>
+      <S.Container>
+        {filteredItems.map(item => (
+          <ReqItem key={item.id} item={item} />
+        ))}
+      </S.Container>
+
+      {filteredItems.length === 0 && (
+        <S.NoResult>
+          <span>조건에 맞는 견적 요청이 없습니다.</span>
+        </S.NoResult>
+      )}
+    </>
   );
 }
 
