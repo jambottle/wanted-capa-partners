@@ -25,7 +25,12 @@ function MenuSlider({ isVisible, onClick }: Props) {
             <span className="itemName">파트너정밀가공</span>
           </S.MenuItem>
           <S.MenuItem>
-            <span className="itemName">로그아웃</span>
+            <span
+              className="signOut"
+              onClick={() => alert('정상적으로 로그아웃되었습니다.')}
+            >
+              로그아웃
+            </span>
           </S.MenuItem>
         </S.MenuList>
       </S.Wrapper>

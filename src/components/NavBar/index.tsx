@@ -26,7 +26,12 @@ function NavBar() {
         />
         <span className="userName">A 가공 업체</span>
         <span className="divider" />
-        <span className="signOut">로그아웃</span>
+        <span
+          className="signOut"
+          onClick={() => alert('정상적으로 로그아웃되었습니다.')}
+        >
+          로그아웃
+        </span>
       </S.UserInfo>
     </S.Container>
   );

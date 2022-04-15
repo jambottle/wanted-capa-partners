@@ -61,14 +61,15 @@ const MenuItem = styled.li`
     height: 15px;
   }
 
-  .itemName {
+  .itemName,
+  .signOut {
     color: #323d45;
     font-family: 'Noto Sans KR Medium';
     font-size: 14px;
     line-height: 20px;
   }
 
-  &:hover {
+  .signOut:hover {
     cursor: pointer;
   }
 `;
