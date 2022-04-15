@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { WIDTH } from 'constants/style';
 
-const Container = styled.nav`
+const Container = styled.header`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 5000;
 
   width: 100%;
   height: 70px;
@@ -14,8 +14,8 @@ const Container = styled.nav`
     height: 44px;
   }
 
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
   background-color: #1565c0;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
 `;
 
 const MenuIcon = styled.img`
