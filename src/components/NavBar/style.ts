@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { WIDTH } from 'constants/style';
+import { WIDTH } from 'constants/styleData';
 
 const Container = styled.header`
   position: absolute;
