@@ -1,8 +1,29 @@
+import { useState, useEffect } from 'react';
+import { ItemType } from 'types';
 import ReqCondition from 'components/ReqCondition';
 import ReqList from 'components/ReqList';
 import * as S from './style';
 
 function DashBoard() {
+  const [fetchedItems, setFetchedItems] = useState<Array<ItemType>>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/requests');
+        if (response.status === 200) {
+          const data = await response.json();
+          setFetchedItems(data);
+        } else {
+          throw new Error('서버 요청에 실패했습니다.');
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <S.Container>
       {/* 대시보드 개요 */}
@@ -13,7 +34,7 @@ function DashBoard() {
       <ReqCondition />
 
       {/* 필터링 결과 영역 */}
-      <ReqList />
+      <ReqList fetchedItems={fetchedItems} />
     </S.Container>
   );
 }
