@@ -12,7 +12,10 @@ function NavBar() {
         src={process.env.PUBLIC_URL + 'assets/icons/icon_menu.png'}
         onClick={() => setIsSliderVisible(true)}
       />
-      <MenuSlider isVisible={isSliderVisible} onClick={setIsSliderVisible} />
+      <MenuSlider
+        isVisible={isSliderVisible}
+        setIsVisible={setIsSliderVisible}
+      />
 
       <S.MenuLogo
         alt="Logo of CAPA Partners"

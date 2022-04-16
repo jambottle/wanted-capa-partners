@@ -21,6 +21,18 @@ const Wrapper = styled.nav<Props>`
     0,
     0
   );
+
+  hr {
+    position: absolute;
+    top: 44px;
+    left: 0;
+
+    width: 280px;
+    height: 1px;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+  }
 `;
 
 const MenuLogo = styled.img`
@@ -30,18 +42,6 @@ const MenuLogo = styled.img`
 
   width: 91.52px;
   height: 12px;
-`;
-
-const Divider = styled.hr`
-  position: absolute;
-  top: 44px;
-  left: 0;
-
-  width: 280px;
-  height: 1px;
-  margin: 0;
-  border: 0;
-  border-top: 1px solid #e5e5e5;
 `;
 
 const MenuList = styled.ul`
@@ -90,4 +90,4 @@ const Overlay = styled.aside<Props>`
   opacity: 0.5;
 `;
 
-export { Wrapper, MenuLogo, Divider, MenuList, MenuItem, Overlay };
+export { Wrapper, MenuLogo, MenuList, MenuItem, Overlay };

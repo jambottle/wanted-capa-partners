@@ -2,18 +2,20 @@ import * as S from './style';
 
 interface Props {
   isVisible: boolean;
-  onClick: (isVisible: boolean) => void;
+  setIsVisible: (isVisible: boolean) => void;
 }
 
-function MenuSlider({ isVisible, onClick }: Props) {
+function MenuSlider({ isVisible, setIsVisible }: Props) {
   return (
     <>
+      <S.Overlay isVisible={isVisible} onClick={() => setIsVisible(false)} />
       <S.Wrapper isVisible={isVisible}>
         <S.MenuLogo
           alt="Logo of CAPA Partners"
           src={process.env.PUBLIC_URL + 'assets/images/logo_color.png'}
         />
-        <S.Divider />
+
+        <hr />
 
         <S.MenuList>
           <S.MenuItem>
@@ -34,8 +36,6 @@ function MenuSlider({ isVisible, onClick }: Props) {
           </S.MenuItem>
         </S.MenuList>
       </S.Wrapper>
-
-      <S.Overlay isVisible={isVisible} onClick={() => onClick(false)} />
     </>
   );
 }
