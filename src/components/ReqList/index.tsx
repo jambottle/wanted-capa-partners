@@ -3,19 +3,19 @@ import ReqItem from 'components/ReqList/ReqItem';
 import * as S from './style';
 
 interface Props {
-  fetchedItems: Array<ItemType>;
+  filteredItems: Array<ItemType>;
 }
 
-function ReqList({ fetchedItems }: Props) {
+function ReqList({ filteredItems }: Props) {
   return (
     <>
       <S.Container>
-        {fetchedItems.map(item => (
+        {filteredItems.map(item => (
           <ReqItem key={item.id} item={item} />
         ))}
       </S.Container>
 
-      {fetchedItems.length === 0 && (
+      {filteredItems.length === 0 && (
         <S.NoResult>
           <span>조건에 맞는 견적 요청이 없습니다.</span>
         </S.NoResult>
