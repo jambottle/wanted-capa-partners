@@ -55,7 +55,6 @@ function DashBoard() {
         setMethods={setMethods}
         materials={materials}
         setMaterials={setMaterials}
-        status={status}
         setStatus={setStatus}
       />
 

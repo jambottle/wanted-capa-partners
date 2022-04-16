@@ -4,8 +4,12 @@ interface Props {
   isSelected: boolean;
 }
 
-const Wrapper = styled.article`
+const Wrapper = styled.button`
   position: relative;
+
+  border: 0;
+  padding: 0;
+  background: none;
 `;
 
 const FilterTitle = styled.div<Props>`
