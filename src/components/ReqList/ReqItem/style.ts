@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.article`
   position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,13 +62,11 @@ const Wrapper = styled.article`
 
     dt {
       width: 70px;
-      height: 20px;
       font-family: 'Noto Sans KR Regular';
     }
 
     dd {
       width: 232px;
-      height: 20px;
       font-family: 'Noto Sans KR Bold';
     }
   }
@@ -120,7 +119,10 @@ const Wrapper = styled.article`
     font-size: 12px;
     line-height: 20px;
     text-align: center;
-    cursor: default;
+
+    &:hover {
+      cursor: default;
+    }
   }
 `;
 
