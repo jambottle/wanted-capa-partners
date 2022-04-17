@@ -10,7 +10,7 @@ function DashBoard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3001/requests');
+        const response = await fetch('/requests');
         if (response.status === 200) {
           const data = await response.json();
           setFetchedItems(data);
