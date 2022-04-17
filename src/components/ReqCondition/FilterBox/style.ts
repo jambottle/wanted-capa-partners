@@ -38,6 +38,7 @@ const FilterTitle = styled.div<Props>`
   }
 
   &:hover {
+    border: 1px solid #2196f3;
     cursor: pointer;
   }
 `;
