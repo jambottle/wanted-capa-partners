@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { WIDTH } from 'constants/styleData';
 
 const Container = styled.header`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 5000;

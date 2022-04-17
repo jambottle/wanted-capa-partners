@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Wrapper = styled.nav<Props>`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10000;
