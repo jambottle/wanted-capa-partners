@@ -14,7 +14,7 @@ function ToggleBox({ setStatus }: Props) {
 
   return (
     <S.Wrapper>
-      <S.Toggle ref={toggleRef} onClick={handleToggle}>
+      <S.Toggle type="button" ref={toggleRef} onClick={handleToggle}>
         <i className="toggle" />
       </S.Toggle>
       <span>상담 중인 요청만 보기</span>

@@ -25,7 +25,7 @@ function FilterBox({ title, list, filter, setFilter }: Props) {
   };
 
   return (
-    <S.Wrapper tabIndex={0} onBlur={hideList}>
+    <S.Wrapper type="button" tabIndex={0} onBlur={hideList}>
       <S.FilterTitle isSelected={filter.length > 0} onClick={toggleList}>
         <span className="title">
           {title}
