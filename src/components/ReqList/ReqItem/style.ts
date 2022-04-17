@@ -71,57 +71,61 @@ const Wrapper = styled.article`
     }
   }
 
-  button {
-    margin-top: 24px;
-    margin-inline-end: 8px;
-    border-radius: 4px;
-    padding: 4px 12px;
+  div {
+    position: relative;
 
-    font-family: 'Noto Sans KR Medium';
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
+    button {
+      margin-top: 24px;
+      margin-inline-end: 8px;
+      border-radius: 4px;
+      padding: 4px 12px;
 
-    &.show {
-      width: 108px;
-      height: 32px;
-      border: none;
-      background-color: #2196f3;
-      color: #ffffff;
+      font-family: 'Noto Sans KR Medium';
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+
+      &.show {
+        width: 108px;
+        height: 32px;
+        border: none;
+        background-color: #2196f3;
+        color: #ffffff;
+      }
+
+      &.chat {
+        width: 80px;
+        height: 32px;
+        border: 1px solid #2196f3;
+        background-color: #ffffff;
+        color: #2196f3;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
-    &.chat {
-      width: 80px;
-      height: 32px;
-      border: 1px solid #2196f3;
+    span.status {
+      position: absolute;
+      top: -258px;
+      right: -8px;
+
+      width: 56px;
+      height: 24px;
+      border: 1px solid #ffa000;
+      border-radius: 12px;
       background-color: #ffffff;
-      color: #2196f3;
-    }
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
+      color: #ffa000;
+      font-family: 'Noto Sans KR Medium';
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
 
-  span.status {
-    position: absolute;
-    top: 24px;
-    right: 16px;
-
-    width: 56px;
-    height: 24px;
-    border: 1px solid #ffa000;
-    border-radius: 12px;
-    background-color: #ffffff;
-
-    color: #ffa000;
-    font-family: 'Noto Sans KR Medium';
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-
-    &:hover {
-      cursor: default;
+      &:hover {
+        cursor: default;
+      }
     }
   }
 `;

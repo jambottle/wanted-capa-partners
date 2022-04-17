@@ -14,9 +14,9 @@ function ReqItem({ item }: Props) {
       <h3>{title}</h3>
       <h5>{client}</h5>
       <span className="due">{due}까지 납기</span>
+
       <hr />
 
-      {/* 요청서 상세내역 */}
       <dl>
         <dt>도면개수</dt>
         <dd>{count}개</dd>
@@ -34,7 +34,7 @@ function ReqItem({ item }: Props) {
         <dd>{material.join(', ')}</dd>
       </dl>
 
-      {/* 요청서 진행 버튼 */}
+      {/* 요청서 확인 및 상담 */}
       <div>
         <button type="button" className="show">
           요청 내역 보기
@@ -42,10 +42,9 @@ function ReqItem({ item }: Props) {
         <button type="button" className="chat">
           채팅하기
         </button>
-      </div>
 
-      {/* 요청서 진행 현황 */}
-      {status === '상담중' && <span className="status">{status}</span>}
+        {status === '상담중' && <span className="status">{status}</span>}
+      </div>
     </S.Wrapper>
   );
 }
